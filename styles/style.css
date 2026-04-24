@@ -1,5 +1,94 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white; /* Времеменное решение */
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+  min-height: 668px;
+  position: relative;
+}
+
+/* Декоративный элемент REC */
+.header__decorative-rec {
+  display: inline-block;
+  top: 1.5rem;
+  right: 1.5rem;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+/* Кружок декоративного элемента через псевдо-элемент */
+.header__decorative-rec::after {
+  content: "";
+  display: inline-block;
+  width: 9px;           /* диаметр круга */
+  height: 9px;          /* диаметр круга */
+  background: white;      /* цвет круга */
+  border-radius: 50%;  /* делаем элемент круглым */
+  margin-left: 10px;    /* отступ слева от точки */
+}
+
+/* Декоративные уголки, основной класс */
+.decorated-zone {
+  position: relative;
+}
+
+/* Декоративные уголок, верхний */
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;      /* длина стороны уголка */
+  height: 20px;   /* длина стороны уголка */
+  border-top: 1px solid white;    /* верхняя граница  (ПОМЕНЯТЬ ЦВЕТ)*/
+  border-right: 1px solid white; /* правая граница  (ПОМЕНЯТЬ ЦВЕТ)*/
+}
+
+/* Декоративный уголок, нижний */
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;      /* длина стороны уголка */
+  height: 20px;   /* длина стороны уголка */
+  border-bottom: 1px solid white;  /* нижняя граница  (ПОМЕНЯТЬ ЦВЕТ)*/
+  border-left: 1px solid white;  /* левая граница (ПОМЕНЯТЬ ЦВЕТ)*/
+}
+
+/* Меню смены темы оформления */
+.header__theme-menu {
+  align-self: center;
+  justify-self: end;
+}
+
+/* Заголовок сайта */
+.header__title {
+  align-self: center;
+  justify-self: center;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+}
+
+/* Подзаголовок шапки сайта */
+.header__subtitle {}
+
+/* Основной контент */
+.main {}
+
+.footer {
+  height: 100vh;
+  min-height: 668px;
+  position: relative;
 }
