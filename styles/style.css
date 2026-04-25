@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  padding: 10px;
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -8,6 +9,13 @@
   background-attachment: fixed;
   color: white; /* Времеменное решение */
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  display: block;
+  height: fit-content;
 }
 
 .header {
@@ -21,21 +29,22 @@
 /* Декоративный элемент REC */
 .header__decorative-rec {
   display: inline-block;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 10px;
+  right: 19px;
   position: absolute;
   text-transform: uppercase;
+  color: var(--accent-color);
 }
 
 /* Кружок декоративного элемента через псевдо-элемент */
 .header__decorative-rec::after {
   content: "";
   display: inline-block;
-  width: 9px;           /* диаметр круга */
-  height: 9px;          /* диаметр круга */
-  background: white;      /* цвет круга */
-  border-radius: 50%;  /* делаем элемент круглым */
-  margin-left: 10px;    /* отступ слева от точки */
+  width: 9px; /* диаметр круга */
+  height: 9px; /* диаметр круга */
+  background: var(--accent-color); /* цвет круга */
+  border-radius: 50%; /* делаем элемент круглым */
+  margin-left: 10px; /* отступ слева от точки */
 }
 
 /* Декоративные уголки, основной класс */
@@ -47,24 +56,24 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 20px;      /* длина стороны уголка */
-  height: 20px;   /* длина стороны уголка */
-  border-top: 1px solid white;    /* верхняя граница  (ПОМЕНЯТЬ ЦВЕТ)*/
-  border-right: 1px solid white; /* правая граница  (ПОМЕНЯТЬ ЦВЕТ)*/
+  top: 0;
+  right: 0;
+  width: 20px; /* длина стороны уголка */
+  height: 20px; /* длина стороны уголка */
+  border-top: 1px solid var(--accent-color); /* верхняя граница */
+  border-right: 1px solid var(--accent-color); /* правая граница */
 }
 
 /* Декоративный уголок, нижний */
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 20px;      /* длина стороны уголка */
-  height: 20px;   /* длина стороны уголка */
-  border-bottom: 1px solid white;  /* нижняя граница  (ПОМЕНЯТЬ ЦВЕТ)*/
-  border-left: 1px solid white;  /* левая граница (ПОМЕНЯТЬ ЦВЕТ)*/
+  bottom: 0;
+  left: 0;
+  width: 20px; /* длина стороны уголка */
+  height: 20px; /* длина стороны уголка */
+  border-bottom: 1px solid var(--accent-color); /* нижняя граница */
+  border-left: 1px solid var(--accent-color);  /* левая граница */
 }
 
 /* Меню смены темы оформления */
@@ -78,14 +87,45 @@
   align-self: center;
   justify-self: center;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 83%;
+  color: var(--headooter-title-color);
 }
 
 /* Подзаголовок шапки сайта */
-.header__subtitle {}
+.header__subtitle {
+}
 
 /* Основной контент */
-.main {}
+.main {
+  background-color: var(--main-color);
+}
+
+.link__external {}
+
+
+.main__section {}
+
+.main__section-title {
+  color: var(--accent-color);
+}
+
+.main__section-content {}
+
+.main__section-article {}
+
+.main__section-article-subtitle {}
+
+.main__section-article-subtitle-subheading {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  display: block;
+  height: fit-content;
+}
+
+.main__section-article-text {
+  color: var(--text-main);
+}
 
 .footer {
   height: 100vh;
