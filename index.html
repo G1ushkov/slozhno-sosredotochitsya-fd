@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" sizes="180x180">
     <meta name="color-scheme" content="dark light">
     <title>Сложно сосредоточиться</title>
+    <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/globals.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/style.css">
@@ -25,7 +26,7 @@
             <button
               class="header__theme-menu-button header__theme-menu-button_type_light"
             >
-              День
+              день
             </button>
           </li>
           <li class="header__theme-menu-item">
@@ -33,24 +34,26 @@
               class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
               disabled
             >
-              Авто
+              авто
             </button>
           </li>
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_dark"
             >
-              Неон
+              неон
             </button>
           </li>
         </ul>
       </nav>
       <h1 class="header__title">no focus</h1>
-      <h3 class="header__subtitle title-decor">Что делать, когда не можешь делать ничего
+      <div class="header__subtitle-box">
+        <h3 class="header__subtitle-text title-decor">Что делать, когда не можешь делать ничего <br>
         Или почему нам так сложно сконцентрироваться, особенно когда очень надо</h3>
+      </div>
     </header>
   <main class="main">
-    <section class="main__section">
+    <section class="main__section main__section-question-why">
       <h2 class="main__section-title">Почему сосредоточиться так сложно</h2>
       <div class="main__section-content">
         <article class="main__section-article">
@@ -78,7 +81,7 @@
         </article>
       </div>
     </section>
-    <section class="main__section">
+    <section class="main__section main__section-question-what">
       <h2 class="main__section-title">Что снижает концентрацию внимания?</h2>
       <div class="main__section-content">
         <article class="main__section-article">
@@ -109,10 +112,10 @@
         </article>
       </div>
     </section>
-    <section class="main__section">
+    <section class="main__section main__section-question-how">
       <h2 class="main__section-title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
-      <h3 class="main__section-article-subtitle title-decor">5 простых (на самом деле не очень) советов</h3>
       <div class="main__section-content">
+        <h3 class="main__section-article-subtitle title-decor">5 простых (на самом деле не очень) советов</h3>
         <article class="main__section-article">
           <h4 class="main__section-article-subtitle-subheading">Представьте небо и облака</h4>
           <p class="main__section-article-text">Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться.
@@ -140,10 +143,19 @@
             Можно совместить прогулку с физическими упражнениями или бегом —
             так в мозг поступит ещё больше кислорода и он будет лучше работать.
             Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
+          <h4 class="main__section-article-subtitle-subheading">Хорошо ешьте</h4>
+          <p class="main__section-article-text">Мы — не ваша бабушка, но это правда важно.
+            Выбирайте продукты, которые препятствуют резким скачкам сахара в крови.
+            Например, с высоким содержанием клетчатки: овощи, ягоды,
+            бобовые (нут, чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.</p>
+          <h4 class="main__section-article-subtitle-subheading">Читайте</h4>
+          <p class="main__section-article-text">Настоящие бумажные книги.
+            Это правда помогает с концентрацией: чтобы прочитать пост в соцсети, достаточно нескольких минут или даже секунд.
+            А вот интересная книга способна затянуть и на несколько часов и круто тренирует направленное внимание.</p>
         </article>
       </div>
     </section>
-    <section class="main__section">
+    <section class="main__section main__section-question-can">
       <h3 class="main__section-article-subtitle title-decor">А можно в картинках?</h3>
       <div class="main__gallery">
         <img class="main__gallery-img"
