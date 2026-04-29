@@ -147,10 +147,6 @@
   margin-bottom: 20px;
 }
 
-.main__section-content {}
-
-.main__section-article {}
-
 .main__section-article-subtitle {
   margin-bottom: 10px;
   font-weight: var(--fw-bold);
@@ -205,10 +201,13 @@
 }
 
 @media (width >= 768px) {
+
+  /* Страница (общий отступ) */
   .page {
     padding: 20px;
   }
 
+  /* Голова */
   .header {
     min-height: 984px;
   }
@@ -223,12 +222,14 @@
     display: flex;
     justify-content: end;
     margin-left: auto;
-    width: min-content;%;
+    width: min-content;
     min-width: 364px;
   }
 
+  /* Главная */
   .main {
     padding-top: 80px;
+    margin-bottom: 80px;
   }
 
   .main__section {
@@ -269,11 +270,16 @@
     grid-row: 1;
   }
 
-  /* Работа над галереей сайта */
+  .main__section-question-can .main__section-article-subtitle {
+    margin-bottom: 0;
+  }
+
+  /* Галерея */
 
   .main__gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, min-content);
+    gap: 20px;
   }
 
   .main__gallery-img:nth-child(1) {
@@ -293,5 +299,68 @@
   .main__gallery-img:nth-child(5) {
     grid-column: 2/4;
     grid-row: 3/5;
+  }
+
+  /* Подвал */
+  .footer {
+    min-height: 984px;
+  }
+
+  .footer .header__title {
+    transform: translateX(-1%);
+  }
+}
+
+@media (width >= 1024px) {
+
+  .header {
+    min-height: 727px;
+  }
+
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+
+  }
+
+  .header__subtitle-text {
+    min-width: 491px;
+  }
+
+  .main__section {
+    gap: 10px;
+  }
+
+  .main__section-question-why {
+    gap: 10px;
+  }
+
+  .main__section-question-what {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Обычно здесь одна колонка для заголовка и контента */
+    gap: 20px;
+  }
+
+  .main__section-question-what .main__section-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / -1;
+    gap: 20px;
+  }
+
+  .main__section-question-how {
+    gap:10px;
+  }
+
+  .main__section-question-can {
+    gap: 20px;
+  }
+
+  .footer {
+    min-height: 734px;
   }
 }
