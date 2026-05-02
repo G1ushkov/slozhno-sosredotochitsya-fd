@@ -1,13 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  padding: 10px;
+  box-sizing: border-box;
   background-image: var(--bg-image);
   background-color: var(--main-color);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  position: relative;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
@@ -21,17 +22,24 @@
 .header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content 1fr min-content;
-  height: 100vh;
-  min-height: 648px; /* должно быть 668 */
+  grid-template-rows: 1fr min-content 1fr;
   position: relative;
+  height: 100vh;
+  min-height: 668px;
+  padding: 10px;
+}
+
+.header__title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Декоративный элемент REC */
 .header__decorative-rec {
   display: inline-block;
-  top: 1px;
-  right: 10px;
+  top: 10px;
+  right: 20px;
   position: absolute;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -57,8 +65,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   width: 25px; /* длина стороны уголка */
   height: 25px; /* длина стороны уголка */
   border-top: 1px solid var(--accent-color); /* верхняя граница */
@@ -69,8 +77,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
   width: 25px; /* длина стороны уголка */
   height: 25px; /* длина стороны уголка */
   border-bottom: 1px solid var(--accent-color); /* нижняя граница */
@@ -100,7 +108,20 @@
 }
 
 .header__theme-menu-button:hover {
+  outline: 1px solid color-mix(in srgb,var(--accent-color) 40%, transparent);
+}
+
+.header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 2px solid var(--accent-color);
 }
 
 /* Заголовок сайта */
@@ -128,13 +149,22 @@
 
 /* Основной контент */
 .main {
-  padding-top: 50px; /* должно быть 40 */
-  margin-bottom: 50px;
+  padding: 40px 10px;
   background-color: var(--main-color);
 
 }
 
-.link__external {}
+.link__external {
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.link__external:hover {
+  text-decoration: underline;
+}
+
+.link__external:focus {
+  outline: 1px solid var(--text-main);
+}
 
 /* Все секции */
 .main__section:not(:last-child) {
@@ -196,20 +226,16 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-height: 648px;
+  min-height: 668px;
   position: relative;
 }
 
 @media (width >= 768px) {
 
-  /* Страница (общий отступ) */
-  .page {
-    padding: 20px;
-  }
-
   /* Голова */
   .header {
-    min-height: 984px;
+    min-height: 1024px;
+    padding: 20px;
   }
 
   .header__title {
@@ -226,10 +252,26 @@
     min-width: 364px;
   }
 
+  .header__decorative-rec {
+    top: 20px;
+    right: 30px;
+    color: var(--accent-color);
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Декоративный уголок, нижний */
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
   /* Главная */
   .main {
-    padding-top: 80px;
-    margin-bottom: 80px;
+    padding: 60px 20px;
   }
 
   .main__section {
@@ -303,7 +345,7 @@
 
   /* Подвал */
   .footer {
-    min-height: 984px;
+    min-height: 1024px;
   }
 
   .footer .header__title {
@@ -314,7 +356,7 @@
 @media (width >= 1024px) {
 
   .header {
-    min-height: 727px;
+    min-height: 768px;
   }
 
   .header__theme-menu {
@@ -361,6 +403,6 @@
   }
 
   .footer {
-    min-height: 734px;
+    min-height: 768px;
   }
 }
