@@ -3,11 +3,22 @@
   и их переопределение под различные устройства
 */
 :root {
+  /* Основные цвета */
   --bg-image: url('/images/cover-image-dark.png');
   --main-color: #000028;
   --accent-color: #ff0070;
+  --contrast-color: #F1B2CE;
+  /* Цвета по блокам */
+  /* "Шапка" */
   --headooter-title-color: #DB00FF;
-  --text-main: #F1B2CE;
+  --theme-btn-color: #ff0070;
+  --decor-color: #ff0070;
+  --header-subtitle-color: #000028;
+  /* "Главная" */
+  --main-sctn-ttl-color: #ff0070;
+  --main-sctn-atcl-subttl-color: #000028;
+  --main-sctn-atcl-subttl-subhd: #000028;
+  /* Размеры */
   --text-main-lh: 1.3;
   --fw-regular: 400;
   --fw-bold: 700;

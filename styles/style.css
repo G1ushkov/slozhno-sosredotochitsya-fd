@@ -69,8 +69,8 @@
   right: 10px;
   width: 25px; /* длина стороны уголка */
   height: 25px; /* длина стороны уголка */
-  border-top: 1px solid var(--accent-color); /* верхняя граница */
-  border-right: 1px solid var(--accent-color); /* правая граница */
+  border-top: 1px solid var(--decor-color); /* верхняя граница */
+  border-right: 1px solid var(--decor-color); /* правая граница */
 }
 
 /* Декоративный уголок, нижний */
@@ -81,8 +81,8 @@
   left: 10px;
   width: 25px; /* длина стороны уголка */
   height: 25px; /* длина стороны уголка */
-  border-bottom: 1px solid var(--accent-color); /* нижняя граница */
-  border-left: 1px solid var(--accent-color);  /* левая граница */
+  border-bottom: 1px solid var(--decor-color); /* нижняя граница */
+  border-left: 1px solid var(--decor-color);  /* левая граница */
 }
 
 /* Меню смены темы оформления */
@@ -101,18 +101,18 @@
 
 .header__theme-menu-button {
   background-color: inherit;
-  color: var(--accent-color);
+  color: var(--theme-btn-color);
   border: none;
   padding: 1px 13px;
   font-size: 18px;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid color-mix(in srgb,var(--accent-color) 40%, transparent);
+  outline: 1px solid color-mix(in srgb,var(--theme-btn-color) 40%, transparent);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--theme-btn-color);
   pointer-events: none;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--theme-btn-color);
 }
 
 /* Заголовок сайта */
@@ -145,6 +145,7 @@
 
 .header__subtitle-text {
   font-weight: var(--fw-bold);
+  color: var(--header-subtitle-color);
 }
 
 /* Основной контент */
@@ -163,7 +164,7 @@
 }
 
 .link__external:focus {
-  outline: 1px solid var(--text-main);
+  outline: 1px solid var(--contrast-color);
 }
 
 /* Все секции */
@@ -172,7 +173,7 @@
 }
 
 .main__section-title {
-  color: var(--accent-color);
+  color: var(--main-sctn-ttl-color);
   font-weight: var(--fw-bold);
   margin-bottom: 20px;
 }
@@ -180,11 +181,12 @@
 .main__section-article-subtitle {
   margin-bottom: 10px;
   font-weight: var(--fw-bold);
+  color: var(--main-sctn-atcl-subttl-color);
 }
 
 .main__section-article-subtitle-subheading {
   background-color: var(--accent-color);
-  color: var(--main-color);
+  color: var(--main-sctn-atcl-subttl-subhd);
   display: block;
   height: fit-content;
   margin-top: 10px;
@@ -196,7 +198,7 @@
 }
 
 .main__section-article-text {
-  color: var(--text-main);
+  color: var(--contrast-color);
   font-weight: var(--fw-regular);
   line-height: var(--text-main-lh);
   margin-bottom: 20px;

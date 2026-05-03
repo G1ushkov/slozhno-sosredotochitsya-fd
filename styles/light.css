@@ -5,9 +5,52 @@
 */
 
 :root.theme-light {
+  /* Основные цвета */
   --bg-image: url('/images/cover-image-light.png');
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --main-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --contrast-color: #353430;
+  /* Цвета по блокам */
+  /* "Шапка" */
+  --headooter-title-color: #FFC2E6;
+  --theme-btn-color: #353430;
+  --decor-color: #353430;
+  --header-subtitle-color: #353430;
+  /* "Главная" */
+  --main-sctn-ttl-color: #353430;
+  --main-sctn-atcl-subttl-color: #353430;
+  --main-sctn-atcl-subttl-subhd: #353430;
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+}
+
+/* Скрыл декоративный элемент */
+.theme-light .header__decorative-rec {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Основные цвета */
+    --bg-image: url('/images/cover-image-light.png');
+    --main-color: #FFF1F7;
+    --accent-color: #FF8DCB;
+    --contrast-color: #353430;
+    /* Цвета по блокам */
+    /* "Шапка" */
+    --headooter-title-color: #FFC2E6;
+    --theme-btn-color: #353430;
+    --decor-color: #353430;
+    --header-subtitle-color: #353430;
+    /* "Главная" */
+    --main-sctn-ttl-color: #353430;
+    --main-sctn-atcl-subttl-color: #353430;
+    --main-sctn-atcl-subttl-subhd: #353430;
+  }
+
+  .theme-light .header__decorative-rec {
+    display: none;
+  }
 }
