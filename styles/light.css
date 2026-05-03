@@ -50,7 +50,7 @@
     --main-sctn-atcl-subttl-subhd: #353430;
   }
 
-  .theme-light .header__decorative-rec {
+  .theme-auto .header__decorative-rec {
     display: none;
   }
 }
