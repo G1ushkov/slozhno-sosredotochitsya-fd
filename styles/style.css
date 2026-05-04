@@ -54,6 +54,7 @@
   background: var(--accent-color); /* цвет круга */
   border-radius: 50%; /* делаем элемент круглым */
   margin-left: 10px; /* отступ слева от точки */
+  box-shadow: 0 0 10px 2px var(--accent-color);
 }
 
 /* Декоративные уголки, основной класс */
@@ -125,7 +126,7 @@
 }
 
 /* Заголовок сайта */
-.header__title {
+.title {
   align-self: center;
   justify-self: center;
   font-weight: var(--fw-bold);
@@ -160,7 +161,7 @@
 }
 
 .link__external:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--contrast-color);
 }
 
 .link__external:focus {
@@ -236,13 +237,15 @@
 
   /* Голова */
   .header {
-    min-height: 1024px;
     padding: 20px;
   }
 
-  .header__title {
+  .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-self: start;
+  }
+
+  .header .title {
     transform: translateX(-3%);
   }
 
@@ -319,7 +322,6 @@
   }
 
   /* Галерея */
-
   .main__gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, min-content);
@@ -345,66 +347,49 @@
     grid-row: 3/5;
   }
 
-  /* Подвал */
-  .footer {
-    min-height: 1024px;
-  }
+  @media (width >= 1024px) {
 
-  .footer .header__title {
-    transform: translateX(-1%);
-  }
-}
+    .header__theme-menu {
+      align-self: start;
+      justify-self: center;
+    }
 
-@media (width >= 1024px) {
+    .header__theme-menu-list {
+      flex-direction: row;
 
-  .header {
-    min-height: 768px;
-  }
+    }
 
-  .header__theme-menu {
-    align-self: start;
-    justify-self: center;
-  }
+    .header__subtitle-text {
+      min-width: 491px;
+    }
 
-  .header__theme-menu-list {
-    flex-direction: row;
+    .main__section {
+      gap: 10px;
+    }
 
-  }
+    .main__section-question-why {
+      gap: 10px;
+    }
 
-  .header__subtitle-text {
-    min-width: 491px;
-  }
+    .main__section-question-what {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* Обычно здесь одна колонка для заголовка и контента */
+      gap: 20px;
+    }
 
-  .main__section {
-    gap: 10px;
-  }
+    .main__section-question-what .main__section-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column: 1 / -1;
+      gap: 20px;
+    }
 
-  .main__section-question-why {
-    gap: 10px;
-  }
+    .main__section-question-how {
+      gap: 10px;
+    }
 
-  .main__section-question-what {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Обычно здесь одна колонка для заголовка и контента */
-    gap: 20px;
-  }
-
-  .main__section-question-what .main__section-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column: 1 / -1;
-    gap: 20px;
-  }
-
-  .main__section-question-how {
-    gap:10px;
-  }
-
-  .main__section-question-can {
-    gap: 20px;
-  }
-
-  .footer {
-    min-height: 768px;
+    .main__section-question-can {
+      gap: 20px;
+    }
   }
 }

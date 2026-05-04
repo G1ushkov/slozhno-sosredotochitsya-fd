@@ -6,7 +6,7 @@
 
 :root.theme-light {
   /* Основные цвета */
-  --bg-image: url('/images/cover-image-light.png');
+  --bg-image: url('../images/cover-image-light.png');
   --main-color: #FFF1F7;
   --accent-color: #FF8DCB;
   --contrast-color: #353430;
@@ -34,7 +34,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* Основные цвета */
-    --bg-image: url('/images/cover-image-light.png');
+    --bg-image: url('../images/cover-image-light.png');
     --main-color: #FFF1F7;
     --accent-color: #FF8DCB;
     --contrast-color: #353430;
